@@ -1,7 +1,38 @@
 import React, {Component} from 'react';
-import {Text, View, Image, TextInput} from 'react-native';
+import {Text, View, Image, TextInput, StyleSheet} from 'react-native';
+import mac from './mac.jpg';
 
 const App = () => {
+  return <StylingReactNativeComponent />;
+};
+
+const StylingReactNativeComponent = () => {
+  return (
+    <View>
+      <Text style={styles.text}>Styling React Native Component</Text>
+      <View style={{padding: 12, backgroundColor: '#f2f2f2', width: 212, borderRadius: 8}}>
+        <Image source={mac} style={{width: 188, height: 107, borderRadius: 8}} />
+        <Text style={{fontSize: 14, fontWeight: 'bold', marginTop: 16}}>New MacBook Pro 2020</Text>
+        <Text style={{fontSize: 12, fontWeight: 'bold', color: 'orange', marginTop: 12}}>Rp. 25.000.000,-</Text>
+        <Text style={{fontSize: 12, fontWeight: 'bold', marginTop: 12}}>Tangerang</Text>
+        <View style={{backgroundColor: 'green', paddingVertical: 6, borderRadius: 25, marginTop: 20,}}>
+          <Text style={{fontSize: 14, fontWeight: '600', color: 'white', textAlign: 'center'}}>BELI</Text>
+        </View>
+      </View>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  text: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: 'red',
+    marginLeft: 20,
+  },
+});
+
+const SampleComponent = () => {
   return (
     <View style={{width: 400, height: 80, backgroundColor: '#81ecec'}}>
       <Text>Ahmad Furqan</Text>
